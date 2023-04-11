@@ -14,6 +14,6 @@ def text_from_pdf():
 
 if __name__ == "__main__":
     data = text_from_pdf()
-    #print((data))    #39590 characters
+    #print(len(data))    #39590 characters
     tokens = nlp(data)
     #print(len(tokens))  #7785 tokens
