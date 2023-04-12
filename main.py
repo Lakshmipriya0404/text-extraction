@@ -2,8 +2,8 @@
 
 from PyPDF2 import PdfReader
 
-def text_from_pdf():
-    reader = PdfReader(f'data/paper1.pdf')
+def text_from_pdf(filepath):
+    reader = PdfReader(filepath)
     new_text = ''
     for page in reader.pages:
         text = page.extract_text()
@@ -16,5 +16,6 @@ def text_from_pdf():
     
 
 if __name__ == "__main__":
-    data = text_from_pdf()
+    filePath = f'data/paper1.pdf'
+    data = text_from_pdf(filePath)
     print(data)  
